@@ -4,18 +4,20 @@
 [ext_resource path="res://Source/Scenes/Platform.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 985, 45 )
+extents = Vector2( 488.5, 45 )
 
 [node name="Main" type="Node2D"]
 
 [node name="Floor" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-position = Vector2( 979, 1051 )
+position = Vector2( 479.5, 528 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 792, 176 )
 
 [node name="Platform" parent="." instance=ExtResource( 2 )]
-position = Vector2( 120, 912 )
+position = Vector2( 120, 376 )
+collision_layer = 8
+collision_mask = 0
